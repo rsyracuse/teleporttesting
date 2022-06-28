@@ -95,7 +95,7 @@ Let's revisit the TLS handshake to better understand what happens under the hood
 In mTLS, Certificate Authorities will need to be internally managed. While chains of trust and strong PKI can and should generally be used in these applications where applicable, it is worth noting that CAs often require stronger security controls than other devices given their critical nature. To ensure CAs are put under a high level of scrutiny, users and administrators should consider applying the following security controls to their CAs:
 
   - **Hardware Security Modules (HSM)** - A Hardware security module is a device built on specialized hardware to protect cryptographic keys, ensure strong encryption, and otherwise provide a high level of performance. These are devices that generally have strong security built in given their singular nature and are designed to be tamper and intrusion resistant.
-  - **Intrusion Prevention Systems** - Intrusion Detection Systems are designed to monitor and inspect network traffic, blocking unwanted traffic and providing logging for security teams to analyze in the event of any incident.
+  - **Intrusion Prevention Systems** - Intrusion Prevention Systems are designed to monitor and inspect network traffic, blocking unwanted or malicious traffic and providing logging for security teams to analyze in the event of any incident.
   - **Strong network access controls and Network Isolation** - A CA should not be given more network access than needed to function, in line with the principle of least privelege. Similarly, only users who absolutely need access to a CA should be able to acces it for this purpose. Consider making your CA a single function device, used for the singular purpose of functioning as a CA.
 
 ### Why Use mTLS
