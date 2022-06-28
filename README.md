@@ -32,8 +32,8 @@ The first step to any certificate being issued to a host begins with public key 
 
 When a host needs its own trusted SSL certificate, it will generally submit a **Certificate Signing Request** (CSR) which largely functions exactly as described. A CSR is generally submitted as follows:
 
-    1. Using its own key pair, the host sends a CSR signed by its private key and a copy of its public key over to a CA.
-    2. Using the public key, the CSR itself, and any additional information that may be optionally required by the CA (usually a domain name), it will verify that the host is who they claim to be. Once this verification is complete, the CA will use its own private key to add its signature to a Certificate and then send the signed certificate back to the host.
+  1. Using its own key pair, the host sends a CSR signed by its private key and a copy of its public key over to a CA.
+  2. Using the public key, the CSR itself, and any additional information that may be optionally required by the CA (usually a domain name), it will verify that the host is who they claim to be. Once this verification is complete, the CA will use its own private key to add its signature to a Certificate and then send the signed certificate back to the host.
 
 Once a host has its certificate,users and administrators can check the certificate signature using the CAs public key, to ensure that the host is who they claim to be. 
 
