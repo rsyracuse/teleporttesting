@@ -2,7 +2,7 @@
 
 **Mutual Transport Layer Security**, or **mTLS**, is a method by which two different devices can authenticate to eachother as a trusted source and create an encrypted channel to communicate in over TCP.  It is a specialized implementation of the more common SSL/TLS standard most known for its ability to secure connections between clients and websites. Despite its more fringe reputation when compared to plain TLS, mTLS can see notable security improvements in the right configurations when applied to the right use cases, and is quickly developing a stronger reputation as a technology worth including in production environments with good reason.
 
-In this blog post, we'll go over a brief history of SSL/TLS, discover how modern TLS works in its latest most secure version (1.3), and then expand on our understanding of TLS by seeing what changes when an additional layer of authentication is applied, interrogating with a higher level of understanding how that might empower engineers and administrators to adapt to an increasingly changing and challenging security space.
+In this blog post, we'll go over a brief history of SSL/TLS, discover how modern TLS works, and then expand on our understanding of TLS by seeing what changes when an additional layer of authentication is applied, interrogating with a higher level of understanding how that might empower engineers and administrators to adapt to an increasingly changing and challenging security space.
 
 ### A brief history of SSL/TLS
 
