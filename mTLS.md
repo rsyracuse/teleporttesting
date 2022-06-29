@@ -71,6 +71,8 @@ The standard **TLS Handshake** on TLS 1.3 can be understood from start to finish
 
 The TLS 1.3 handshake doesn't usally deviate from the expected behavior above, though will automatically go through some adjustments in some edge cases, such as if the protocol detects tampering or the `ClientHello` was unable to guess the correct kind of cryptography. The TLS handshake can also be intentionally configured to behave differently by an administrator in special configurations, such as if a pre-shared key (PSK) is used.
 
+![TLS Handshake](tls-handshake1.jpg)
+
 It is worth keeping in mind that in common TLS implementations, such as the TLS relationship between your client and this website, there isn't any need to check for client authenticity outside of ensuring that the client remains the singular client that originally initiated this connection. While TLS normally takes steps to ensures that both client and server remain the same throughout the connection, it is not required to ensure that the client is trusted. As far as common TLS configurations are concerned, a client can be almost anyone as long as they consistently stay themselves. 
 
 ### What Makes mTLS different? 
@@ -89,6 +91,8 @@ Let's revisit the TLS handshake to better understand what happens under the hood
 2. The `ServerHello` message now includes a Certificate Request, informing the client that they require information regarding their TLS certificate. The server will **not** send a message confirming that it is finished with its part of the handshake.
 3. The client will additionally include information regarding its TLS certificate, including its digital signature, in a message to the host to demonstrate that it does own the private key affiliated with the certificate as defined by the certificate authority. The client lets the server know that it is finished with its part of the handshake.
 4. The server will respond with a message confirming that it is finished with its part of the handshake. Data can now be encrypted and decrypted between the two hosts.
+
+![mTLS Handshake](tls-handshake-2.jpg)
 
 ### A note on mTLS Infrastructure
 
